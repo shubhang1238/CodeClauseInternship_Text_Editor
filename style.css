@@ -1,0 +1,201 @@
+/* Import FontAwesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+/* Import Animate.css for animations */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background: url('path/to/your/background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.project-title {
+  text-align: center;
+  font-size: 3rem;
+  font-decoration:white Grow;
+  font-family:monospace,cursive,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #ff0000;
+  margin: 20px 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Text shadow for emphasis */
+  background: linear-gradient(50deg, #ff0000, #00ff00, #0000ff);
+  /* Colorful gradient background */
+  -webkit-background-clip: text;
+  /* Clip the background to the text */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Make the text transparent to show the background */
+  animation: pulse 1s infinite alternate;
+  /* Pulse animation */
+
+  /* Add hover effect */
+}
+
+.project-title:hover {
+  transform: scale(1.1);
+  /* Scale on hover for emphasis */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+.editor-container {
+  background-color: none;
+  box-shadow: none;
+  /* Dark background with transparency */
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  /* border-radius: 10px; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.editor-button {
+  height: 32px;
+  min-width: 32px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-radius: 4px;
+  height: 4.5vh;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.editor-button:hover {
+  background-color: #3a3a3a;
+}
+.editor-button {
+  /* Existing styles */
+
+  transition: transform 0.2s, background-color 0.2s, color 0.2s;
+  /* Add smooth transition */
+}
+
+.editor-button:hover {
+  transform: scale(1.1);
+  /* Grow on hover */
+  background-color: #555;
+  /* Change background color on hover */
+  color: #00aaff;
+  /* Change text color on hover */
+}
+
+.editor-button i {
+  transition: color 0.3s ease-in-out;
+}
+
+.editor-button:hover i {
+  color: #00aaff;
+}
+
+
+.editor-stats {
+  margin-bottom: 10px;
+  color: #bbbbbb;
+}
+
+#wordCountDisplay {
+  color: #33ff33;
+}
+
+#charCountDisplay {
+  color: #3399ff;
+}
+
+/* Rest of the styles */
+
+#editor-text {
+  border: 1px solid #555555;
+  padding: 10px;
+  margin-top: 7vh;
+  height: 25rem;
+  min-height: 150px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  resize: inherit;
+  outline: none;
+  margin-bottom: 1.5vh;
+  background-color: rgba(51, 51, 51, 0.8);
+  /* Dark background with transparency */
+  color: #ffffff;
+}
+#clearButton{
+  background-color: #ff0000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#clearButton:hover{
+  background-color: red;
+  cursor: pointer;
+  animation: 1s fade;
+}
+
+#clearButton,
+#toggleToolbarButton {
+  margin-right: 10px;
+}
+
+input[type="color"] {
+  height: 32px;
+  width: 32px;
+}
+
+/* Animation using Animate.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.editor-button {
+  animation: fadeIn 0.5s ease forwards;
+}
+video {
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
